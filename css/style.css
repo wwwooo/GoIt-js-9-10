@@ -1,3 +1,32 @@
 .jcarousel-wrapper {
     width: 960px;
 }
+
+.selectric {
+    width: 200px;
+}
+
+.checkbox-wrap {
+    background: rgb(153, 204, 255);
+}
+
+.niceCheck {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    cursor: pointer;
+    background: url(../img/checkbox.png);
+}
+
+.niceChecked {
+    background-position: 0 -17px;
+}
+
+.niceCheck input {
+    margin-left: 15px;
+    //display: none;
+}
+
+.niceCheckDisabled {
+    background: url(../img/checkbox-disabled.png) 0 17px;
+}

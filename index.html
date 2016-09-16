@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <title>Ксения Малиновская</title>
     <link rel="stylesheet" href="css/jcarousel.responsive.css">
+    <link rel="stylesheet" href="css/selectric.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/jquery.jcarousel.min.js"></script>
     <script src="js/jcarousel.responsive.js"></script>
+    <script src="js/jquery.selectric.min.js"></script>
     <script src='js/main.js'></script>
 </head>
 <body>
@@ -22,11 +24,36 @@
                 <li><img src="img/img6.jpg" alt="Image 6"></li>
             </ul>
         </div>
-
         <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
         <a href="#" class="jcarousel-control-next">&rsaquo;</a>
-
         <p class="jcarousel-pagination"></p>
     </div>
+
+    <div class="box">
+        <select>
+            <option value="Маша">Маша</option>
+            <option value="Лариса">Лариса</option>
+            <option value="Саша">Саша</option>
+            <option value="Женя">Женя</option>
+            <option value="Ксюша">Ксюша</option>
+            <option value="Вика">Вика</option>
+        </select>
+    </div>
+
+    <form class="wrap checkbox-wrap">
+        <p>jquery:</p>
+        <div>
+            <label for="ch1">label 1</label>
+            <input type="checkbox" id="ch1" class="niceCheck">
+        </div>
+        <div>
+            <label for="ch2">label 2</label>
+            <input type="checkbox" id="ch2" class="niceCheck" checked>
+        </div>
+        <div>
+            <label for="ch3">label 3</label>
+            <input type="checkbox" id="ch3" class="niceCheck" disabled>
+        </div>
+    </form>
 </body>
 </html>
