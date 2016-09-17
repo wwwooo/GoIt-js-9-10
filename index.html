@@ -28,7 +28,6 @@
         <a href="#" class="jcarousel-control-next">&rsaquo;</a>
         <p class="jcarousel-pagination"></p>
     </div>
-
     <div class="box">
         <select>
             <option value="Маша">Маша</option>
@@ -39,21 +38,36 @@
             <option value="Вика">Вика</option>
         </select>
     </div>
-
-    <form class="wrap checkbox-wrap">
+    <form action="#">
         <p>jquery:</p>
-        <div>
-            <label for="ch1">label 1</label>
-            <input type="checkbox" id="ch1" class="niceCheck">
-        </div>
-        <div>
-            <label for="ch2">label 2</label>
-            <input type="checkbox" id="ch2" class="niceCheck" checked>
-        </div>
-        <div>
-            <label for="ch3">label 3</label>
-            <input type="checkbox" id="ch3" class="niceCheck" disabled>
-        </div>
+        <label>
+            label 1
+            <input type="checkbox" class="cbx">
+        </label>
+        <label>
+            label 2
+            <input type="checkbox" class="cbx" checked>
+        </label>
+        <label>
+            label 3
+            <input type="checkbox" class="cbx" checked disabled>
+        </label>
+        <p>css:</p>
+        <label>
+            label 1
+            <input type="checkbox" class="cbx2">
+            <span class="niceCheck2"></span>
+        </label>
+        <label>
+            label 2
+            <input type="checkbox" checked class="cbx2">
+            <span class="niceCheck2"></span>
+        </label>
+        <label>
+            label 3
+            <input type="checkbox" checked disabled class="cbx2">
+            <span class="niceCheck2"></span>
+        </label>
     </form>
 </body>
 </html>

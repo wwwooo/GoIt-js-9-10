@@ -6,11 +6,41 @@
     width: 200px;
 }
 
-.checkbox-wrap {
+form {
     background: rgb(153, 204, 255);
 }
 
+label {
+    display: block;
+    margin: 10px 20px;
+}
+
 .niceCheck {
+    margin-top: -2px;
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    cursor: pointer;
+    background: url(../img/checkbox.png);
+    vertical-align: middle;
+    //overflow: hidden;
+}
+
+.niceCheckDisabled {
+    background: url(../img/checkbox-disabled.png);
+}
+
+.niceChecked {
+    background-position: 0 -17px;
+}
+
+.cbx,
+.cbx2 {
+    position: absolute;
+    left: 5px;
+}
+
+.niceCheck2 {
     width: 17px;
     height: 17px;
     display: inline-block;
@@ -18,15 +48,14 @@
     background: url(../img/checkbox.png);
 }
 
-.niceChecked {
+.cbx2:checked + .niceCheck2 {
     background-position: 0 -17px;
 }
 
-.niceCheck input {
-    margin-left: 15px;
-    //display: none;
+.cbx2:disabled + .niceCheck2 {
+    background: url(../img/checkbox-disabled.png);
 }
 
-.niceCheckDisabled {
+.cbx2:checked:disabled + .niceCheck2 {
     background: url(../img/checkbox-disabled.png) 0 17px;
 }

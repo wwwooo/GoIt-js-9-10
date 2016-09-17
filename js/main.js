@@ -1,50 +1,33 @@
-var changeCheck = function(span) {
-    var ch = span.find('input');
-    if (ch.attr('class').indexOf('niceCheckDisabled') === -1) {
-        if (!ch.attr('checked')) {
-            span.addClass('niceChecked');
-            ch.attr('checked', true);
-        } else {
-            span.removeClass('niceChecked');
-            ch.attr('checked', false).focus();
-        }
-    }
-};
-
-var changeVisualCheck = function(ch) {
-    if (!ch.attr('checked')) {
-        ch.parent().addClass('niceChecked');
+var changeVisualCheck = function(cbx, parent) {
+    if (cbx.attr('checked')) {
+        parent.removeClass('niceChecked');
+        cbx.attr('checked', false);
     } else {
-        ch.parent().removeClass('niceChecked');
+        parent.addClass('niceChecked');
+        cbx.attr('checked', true);
     }
 };
 
-var changeCheckStart = function(ch) {
-    ch.wrap('<span class="niceCheck"></span>');
-    var checkChecked = ch.attr('checked');
-    var checkDisabled = ch.attr('disabled');
+var changeCheckStart = function(cbx) {
+    cbx.wrap('<span class="niceCheck"></span>');
+    var parent = cbx.parent();
 
-    if (checkChecked) {
-        ch.parent().addClass('niceChecked');
+    if (cbx.attr('checked')) {
+        parent.addClass('niceChecked');
+    }
+    if (cbx.attr('disabled')) {
+        parent.addClass('niceCheckDisabled');
     }
 
-    if (checkDisabled) {
-        ch.parent().addClass('niceCheckDisabled');
-    }
-
-    ch.parent().on('click', function() {
-        changeCheck($(this));
-    });
-
-    ch.on('change', function() {
-        changeVisualCheck($(this));
+    cbx.on('change', function() {
+        changeVisualCheck($(this), parent);
     });
 };
 
 $(function() {
     $('select').selectric();
 
-    $('.niceCheck').each(function() {
+    $('.cbx').each(function() {
         changeCheckStart($(this));
     });
 });
