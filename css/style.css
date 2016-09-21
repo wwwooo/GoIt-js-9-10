@@ -7,7 +7,11 @@
 }
 
 form {
+    margin: 0 auto;
+    padding: 10px;
+    width: 200px;
     background: rgb(153, 204, 255);
+    border-radius: 5px;
 }
 
 label {
@@ -15,7 +19,13 @@ label {
     margin: 10px 20px;
 }
 
-.niceCheck {
+p {
+    margin: 10px;
+    color: #fff;
+}
+
+.niceCheck,
+.niceCheck2 {
     margin-top: -2px;
     width: 17px;
     height: 17px;
@@ -23,7 +33,7 @@ label {
     cursor: pointer;
     background: url(../img/checkbox.png);
     vertical-align: middle;
-    //overflow: hidden;
+    overflow: hidden;
 }
 
 .niceCheckDisabled {
@@ -34,18 +44,12 @@ label {
     background-position: 0 -17px;
 }
 
-.cbx,
-.cbx2 {
-    position: absolute;
-    left: 5px;
+.cbx {
+    margin-left: -65px;
 }
 
-.niceCheck2 {
-    width: 17px;
-    height: 17px;
-    display: inline-block;
-    cursor: pointer;
-    background: url(../img/checkbox.png);
+.cbx2 {
+    display: none;
 }
 
 .cbx2:checked + .niceCheck2 {
@@ -58,4 +62,65 @@ label {
 
 .cbx2:checked:disabled + .niceCheck2 {
     background: url(../img/checkbox-disabled.png) 0 17px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-menu {
+    margin: 50px 0 250px;
+    background: rgb(255, 100, 100);
+}
+
+.main-menu__item {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.menu__item a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.main-menu__item-with-submenu,
+.submenu__item-with-submenu {
+    position: relative;
+}
+
+.main-menu__item-with-submenu:after {
+    content: '\25BE';
+    display: inline-block;
+    position: absolute;
+}
+
+.submenu__item-with-submenu:after {
+    content: '\25B8';
+    display: inline-block;
+    position: absolute;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    width: 200px;
+    background: rgb(200, 50, 50);
+}
+
+.submenu__item {
+    position: relative;
+    text-align: center;
+}
+
+.submenu__item a {
+    padding: 10px;
+}
+
+.submenu__item .submenu {
+    top: 0;
+    right: -200px;
 }
