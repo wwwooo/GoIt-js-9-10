@@ -31,8 +31,8 @@ $(function() {
         changeCheckStart($(this));
     });
 
-    $('.main-menu__item > a').not('.main-menu__item > a:last-child').addClass('main-menu__item-with-submenu');
-    $('.submenu__item > a').not('.submenu__item > a:last-child').addClass('submenu__item-with-submenu');
+    $('.main-menu__item > a').not('.main-menu__item > a:last-child').addClass('main-menu__link-with-submenu');
+    $('.submenu__item > a').not('.submenu__item > a:last-child').addClass('submenu__link-with-submenu');
 
     $('.menu__item').hover(
         function() {

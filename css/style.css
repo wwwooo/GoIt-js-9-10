@@ -1,4 +1,5 @@
 .jcarousel-wrapper {
+    margin-bottom: 50px;
     width: 960px;
 }
 
@@ -7,7 +8,7 @@
 }
 
 form {
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 10px;
     width: 200px;
     background: rgb(153, 204, 255);
@@ -71,8 +72,8 @@ ul {
 }
 
 .main-menu {
-    margin: 50px 0 250px;
-    background: rgb(255, 100, 100);
+    margin-bottom: 250px;
+    background: rgba(255, 100, 100, .8);
 }
 
 .main-menu__item {
@@ -80,25 +81,26 @@ ul {
     margin: 0 5px;
 }
 
-.menu__item a {
+.main-menu__link,
+.submenu__link{
     display: inline-block;
     padding: 15px;
     text-decoration: none;
     color: #fff;
 }
 
-.main-menu__item-with-submenu,
-.submenu__item-with-submenu {
+.main-menu__link-with-submenu,
+.submenu__link-with-submenu {
     position: relative;
 }
 
-.main-menu__item-with-submenu:after {
+.main-menu__link-with-submenu:after {
     content: '\25BE';
     display: inline-block;
     position: absolute;
 }
 
-.submenu__item-with-submenu:after {
+.submenu__link-with-submenu:after {
     content: '\25B8';
     display: inline-block;
     position: absolute;
@@ -108,7 +110,7 @@ ul {
     display: none;
     position: absolute;
     width: 200px;
-    background: rgb(200, 50, 50);
+    background: rgba(200, 30, 40, .9);
 }
 
 .submenu__item {
@@ -116,8 +118,10 @@ ul {
     text-align: center;
 }
 
-.submenu__item a {
-    padding: 10px;
+.submenu__link {
+    margin: 10px;
+    padding: 1px;
+    border-bottom: 1px solid;
 }
 
 .submenu__item .submenu {
