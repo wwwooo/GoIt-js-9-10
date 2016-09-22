@@ -36,18 +36,20 @@ $(function() {
 
     $('.menu__item').hover(
         function() {
-            if ($('.menu__item').children('.submenu')) {
-                $(this).children('.submenu').show();
+            var menu__item = $(this);
+            if (menu__item.children('.submenu')) {
+                menu__item.children('.submenu').show();
             }
-            $(this).children('a').animate({
+            menu__item.children('a').animate({
                 color: '#000'
             }, 100);
         },
         function() {
-            if ($('.menu__item').children('.submenu')) {
-                $(this).children('.submenu').hide();
+            var menu__item = $(this);
+            if (menu__item.children('.submenu')) {
+                menu__item.children('.submenu').hide();
             }
-            $(this).children('a').animate({
+            menu__item.children('a').animate({
                 color: '#fff'
             }, 100);
         }
