@@ -36,22 +36,18 @@ $(function() {
 
     $('.menu__item').hover(
         function() {
-            var menu__item = $(this);
-            if (menu__item.children('.submenu')) {
-                menu__item.children('.submenu').show();
-            }
-            menu__item.children('a').animate({
+            var $menuItem = $(this);
+            $menuItem.children('a').animate({
                 color: '#000'
             }, 100);
+            $menuItem.children('.submenu').show();
         },
         function() {
-            var menu__item = $(this);
-            if (menu__item.children('.submenu')) {
-                menu__item.children('.submenu').hide();
-            }
-            menu__item.children('a').animate({
+            var $menuItem = $(this);
+            $menuItem.children('a').animate({
                 color: '#fff'
             }, 100);
+            $menuItem.children('.submenu').hide();
         }
     );
 });
